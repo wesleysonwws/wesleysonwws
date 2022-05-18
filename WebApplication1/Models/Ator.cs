@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class Ator: IEntidade
+    public class Ator: Artista
     {
-        [Key]
-        public int Id { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime DataAlteracao { get; set; }
+        #region Relacionamentos
+        public  List<Atorfilme> AtoresFilmes { get; set; }
+        #endregion
 
-        public string Nome { get; set; }
-        public string Bio { get; set; }
-        public string FotoPerfilURL { get; set; }
-       
     }
-    }
+}
 
